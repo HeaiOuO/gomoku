@@ -1,0 +1,13 @@
+<div class="sidenav">
+  <button 
+    (click)='newRoom()'
+    class="sidenav__btn"
+    >Create Room</button>
+  <h4
+    *ngFor='let id of allRooms | async'
+    (click)='loadRoom(id)' 
+    class="sidenav__room-name"
+    [class.selected]='id === currentRoom.id'
+    >Room {{id}}</h4>
+</div>
+

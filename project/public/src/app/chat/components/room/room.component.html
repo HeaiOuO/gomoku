@@ -1,0 +1,13 @@
+<div class="chatroom">
+  <h2 
+    class="chatroom__location"
+    *ngIf="room.id">
+    Chatroom {{room.id}}
+  </h2>
+  <textarea 
+    class="chatroom__msg-input"
+    [(ngModel)]='room.chat' 
+    (keyup)='editRoom()' 
+    placeholder='Start typing...'>
+  </textarea>
+</div>
